@@ -11,7 +11,7 @@ html {
 }
 
 body {
-    margin:0;
+    margin: 0;
     padding: 0;
 }
 
@@ -20,15 +20,16 @@ body {
     margin: auto;
 }
 
-.layar-penuh  {
+.layar-penuh {
     width: 100%;
 }
 
+/* NAVIGASI */
 nav {
     z-index: 100;
     color: #fff;
     text-align: center;
-    position:fixed;
+    position: fixed;
     border-bottom: 1px solid #b1b1b1;
     line-height: 60px;
     width: 100%;
@@ -37,7 +38,6 @@ nav {
 
 nav-putih {
     background-color: #fff;
-
 }
 
 nav .logo {
@@ -45,7 +45,6 @@ nav .logo {
     position: relative;
     line-height: 55px;
     text-align: center;
-
 }
 
 nav .logo img {
@@ -67,12 +66,12 @@ nav .menu ul {
 }
 
 nav .menu ul li {
-list-style-type:none ;
-float: left;
-line-height: 60px;
+    list-style-type: none;
+    float: left;
+    line-height: 60px;
 }
 
-nav ul li a{
+nav ul li a {
     color: #fff;
     text-align: center;
     padding: 0px 16px 0px 16px;
@@ -83,25 +82,23 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
-/* pengaturan header */
-
+/* HEADER & VIDEO */
 header {
     position: relative;
     height: 100vh;
-    width : 100%;
+    width: 100%;
     overflow: hidden;
     z-index: 2;
 }
 
-/* Responsive Google Drive video iframe */
 .video-container {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
     height: 100%;
+    width: 100%;
+    z-index: 1;
     overflow: hidden;
-    z-index: -2;
 }
 
 .video-container iframe {
@@ -111,13 +108,24 @@ header {
     border: none;
 }
 
+header .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
 
 header .intro {
-    z-index: 100;
+    z-index: 3;
     color: #fff;
     text-align: center;
     position: relative;
-    top :50%;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0 20px;
 }
 
 header .intro h3 {
@@ -125,6 +133,7 @@ header .intro h3 {
     margin: 0;
     padding: 0;
 }
+
 .tombol {
     background-color: #c86b85;
     height: 40px;
@@ -134,36 +143,28 @@ header .intro h3 {
     display: inline-block;
     padding: 0px 20px 0px 20px;
     font-size: 15px;
-    border-radius: 4px ;
+    border-radius: 4px;
 }
 
-header .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: #000;
-    opacity: 50%;
-    z-index: -1;
-}
+/* HAMBURGER MENU */
 .tombol-menu {
-
     position: absolute;
-    top :1.7rem;
+    top: 1.7rem;
     right: 1rem;
     flex-direction: column;
     justify-content: space-between;
     width: 30px;
     height: 20px;
+    display: none;
+    z-index: 999;
 }
 
 .tombol-menu .garis {
     height: 3px;
     background-color: #fff;
-
 }
 
+/* SECTION DASAR */
 section {
     padding: 50px 0px 50px 0px;
 }
@@ -188,28 +189,30 @@ section p.ringkasan {
     font-style: italic;
     font-size: 18px;
     color: #ababab;
-
 }
 
 section .konten-isi p {
     font-style: normal;
 }
 
+/* NAV PUTIH */
 nav.putih {
     background-color: #fff;
 }
+
 nav.putih .tombol-menu .garis {
     background-color: #333;
 }
 
 nav .logo img.hitam {
     display: none;
-
 }
+
 nav.putih ul li a {
     color: #333;
 }
 
+/* SECTION KHUSUS */
 section.abuabu {
     background-color: #f6f6f6;
 }
@@ -220,7 +223,7 @@ section.abuabu {
     justify-content: space-around;
 }
 
-.suppport h6 , .tim h6{
+.support h6, .tim h6 {
     margin: 0px;
     padding: 0px;
     margin-top: 20px;
@@ -237,12 +240,13 @@ section.abuabu {
     width: 26%;
 }
 
+/* GALLERY */
 section#gallery {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-around;
     overflow: hidden;
-    padding: 10px 0px 10px 0px;
+    padding: 10px 0px;
 }
 
 section#gallery div {
@@ -258,29 +262,34 @@ section#gallery div img:hover {
     transition: all 0.2s ease-in-out;
     transform: scale(1.1);
 }
+
+/* QUOTE */
 section.quote {
     background: url('../assets/background-bromo.jpg');
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
     text-align: center;
-    color:#fff;
-    font-size:20px;
+    color: #fff;
+    font-size: 20px;
     font-style: italic;
     padding: 100px;
 }
+
 section.quote .layar-dalam {
     display: inline;
-    background:url("../assets/quote-icon.png") no-repeat;
+    background: url("../assets/quote-icon.png") no-repeat;
     padding: 40px;
-
 }
+
+/* TEAM */
 .tim img {
     width: 100%;
     box-shadow: 0px -10px 30px #ccc;
     border-radius: 5px;
 }
 
+/* BLOG */
 .blog .area {
     width: 47%;
     box-shadow: 0px -10px 30px #ccc;
@@ -289,10 +298,11 @@ section.quote .layar-dalam {
     flex-direction: row;
     justify-content: space-between;
 }
+
 .blog div.area div {
     width: 50%;
-
 }
+
 .blog .area .gambar {
     border-radius: 5px 0px 0px 5px;
     background-repeat: no-repeat;
@@ -302,20 +312,24 @@ section.quote .layar-dalam {
 }
 
 .blog .area .text article {
-    padding:40px;
+    padding: 40px;
 }
+
 .blog .area .text article h4 {
     margin: 0;
 }
+
 .blog .area .text article a {
     color: #333;
 }
+
 .blog .area .text article a:hover {
     color: #ccc;
 }
 
+/* FOOTER */
 footer {
-    padding: 50px 0px 50px 0px;
+    padding: 50px 0px;
     background-color: #343a40;
     color: #fff;
 }
@@ -335,6 +349,7 @@ footer .layar-dalam h5 {
     font-size: 20px;
     font-weight: bold;
 }
+
 footer .layar-dalam .copyright {
     width: 100%;
     margin-top: 30px;
@@ -343,10 +358,12 @@ footer .layar-dalam .copyright {
     text-align: center;
 }
 
-@media screen and (max-width: 991.98px){
+/* RESPONSIVE */
+@media screen and (max-width: 991.98px) {
     .layar-dalam {
         width: 90%;
     }
+
     nav .menu ul {
         display: none;
         margin-top: 60px;
@@ -354,40 +371,44 @@ footer .layar-dalam .copyright {
         top: 0;
         left: 0;
         width: 100%;
+        background: white;
     }
+
     nav .menu ul li {
         width: 100%;
         border-bottom: 1px solid #ccc;
         background-color: #fff;
         line-height: 40px;
     }
+
     nav .menu ul li a {
         color: #333;
         transition: color 0.5s ease;
         text-decoration: none;
-
     }
+
     .tombol-menu {
         display: flex;
-
     }
+
     .blog .area {
         display: block;
-
     }
 
     .blog div.area div {
         width: 100%;
     }
+
     .blog .area .gambar {
         border-radius: 5px 5px 0px 0px;
         height: 200px;
     }
+
     .support {
         display: block;
-
     }
-    .support div{
+
+    .support div {
         width: 100%;
         padding-bottom: 30px;
     }
